@@ -1,17 +1,33 @@
-.body{
+body{
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 header{
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    border-bottom: 1px solid black;
+}
+.mainContainer{
+    display: flex;
 }
 #cityForm{
     margin-bottom: 25px;
+    display: flex;
+}
+#cityInput{
+    width: 100%
+}
+#searchCity{
+    font-size: 30px;
 }
 .citySearchContainer{
     width: 30%;
     font-size: 25px;
     font-family: 'Raleway', sans-serif;
+    background-color: #7D938A;
+    padding: 30px;
+    height: 84vh;
 }
 #cityButtonsContainer{
     display: flex;
@@ -22,4 +38,43 @@ header{
     padding: 20px;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
+    border-radius: 3px;
+}
+.weatherInfo{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+}
+#cityWeatherContainer{
+    padding: 20px;
+    border-radius: 3px;
+    margin: 20px;
+    background-color: #e6e3e3;
+    box-shadow: 0px 2px 6px 0px #666;
+    font-size: 20px;
+}
+#weatherIcon{
+    float: right;
+    width: 150px;
+}
+#uvIndex{
+    border-radius: 3px;
+    padding:3px;
+}
+.fiveDayForecast{
+    margin: 10px 40px;
+}
+.fiveDayContainers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.forecastDays{
+    width: 160px;
+    font-size: 20px;
+    text-align: center;
+    background-color:#e6e3e3;
+    box-shadow: 0px 2px 6px 0px #666;
+    border-radius: 3px;
+    margin: 20px;
 }

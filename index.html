@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href='Assets/style.css'>
 </head>
+
 <body>
     <header>
-        <h1>Weather</h1>
+        <h1>Weather Dashboard
+        </h1>
     </header>
-    <div class="citySearchContainer">
+    <div class="mainContainer">
+        <div class="citySearchContainer">
 
-        <form id="cityForm">
-          <label for="cityInput">City Search: </label>
-          <input type="text" id="cityInput">
-          <!-- button to submit a new city -->
-          <button id="searchCity" type="submit" ><i class="fa fa-search"></i></button>
-        </form>
-         <!-- Container for city buttons  -->
-        <div id="cityButtonsContainer"></div>
-    
+            <form id="cityForm">
+
+                <input type="text" id="cityInput" placeholder="City Search">
+                <!-- button to submit a new city -->
+                <button id="searchCity" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <!-- Container for city buttons  -->
+            <div id="cityButtonsContainer"></div>
+        </div>
         <!-- City Weather Information will be rendered here-->
-        <div id="cityWeatherContainer"></div>
-    
+        <div class="weatherInfo">
+            <div id="cityWeatherContainer">
+                <img id="weatherIcon">
+                <h1 id='selectedCity'>City Name</h1>
+                <p id="currentDate"></p>
+                <p>Wind Speed: <span id='windSpeed'></span></p>
+                <p>Current Temp: <span id='currentTemp'></span></p>
+                <p>Humidity: <span id='humidty'></span></p>
+                <p>UV Index: <span id='uvIndex'></span></p>
+            </div>
+            <div class="fiveDayForecast">
+                <h1>5 Day Forcast</h1>
+                <div class="fiveDayContainers"></div>
+            </div>
+        </div>
+       
+    </div>
+
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src='script.js'></script>
 </body>
+
 </html>
