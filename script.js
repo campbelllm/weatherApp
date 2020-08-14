@@ -48,7 +48,7 @@
      //one cities weather shows up at a time
     $('.fiveDayContainers').empty()
     //creating and assigning elements for 5 day forecast
-    for(let i =1; i < arr.length; i++){
+    for(let i =1; i < 6; i++){
       const forecastDays = $('<div>').addClass('forecastDays')
       const forecastDate = $('<p>').text(moment().add(i, 'days').format("ddd-Do"));
       const forecastIcon = $('<img>').attr("src", "http://openweathermap.org/img/wn/" + arr[i].weather[0].icon +"@2x.png");
