@@ -17,4 +17,6 @@ Link to gitHub pages site:
 https://campbelllm.github.io/weatherApp/index.html
 
 Preview of site:
-[Weather Dashboard Preview](Assets/hwScreenshot.png)
+![Weather Dashboard Preview](./Assets/hwScreenshot.png)
+
+
