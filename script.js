@@ -11,7 +11,7 @@
       $("#selectedCity").text(response.name);
       $("#weatherIcon").attr("src","http://openweathermap.org/img/wn/" + response.weather[0].icon +"@2x.png");
       $('#currentDate').text(moment().format("MMMM Do, YYYY"));
-      $('windSpeed').text("Wind Speed: " + response.wind.speed + " mph");
+      $('#windSpeed').text(response.wind.speed + " mph");
       $('#currentTemp').text(response.main.temp);
       $('#humidty').text(response.main.humidity + "%");
       //setting longitude and latitude values for future use
@@ -108,6 +108,7 @@
   }
   getCities()
   renderCityButtons();
+  //when page is refreshed the last button element is clicked to render last searched cities data
  $('button:last-child').click()
   
 });
