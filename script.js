@@ -1,7 +1,8 @@
  $(document).ready(function () {
+  
   const APIKey = "166a433c57516f51dfab1f7edaed8413";
   let cities = [];
-
+  
   function displayCityInfo() {
     let city = $(this).attr("data-name");
     let queryURL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
@@ -92,29 +93,21 @@
   // Calling the renderCityButtons function to display the initial buttons
   
   //LOCAL STORAGE... here we come
+
+  //setting items in cities arr to local storage
   function storeCityInfo() {
      localStorage.setItem('cities',  JSON.stringify(cities));
   }
-
+ //getting stored items,from previouse searches, to render as buttons
   function getCities(){
-    // if(cities.val()){
-    //   return false;
-    // }
+    //if there are items in a stored 'cities' key, grab them and push to cities arr
     if (localStorage.getItem("cities")) {
       const savedCities = JSON.parse(localStorage.getItem("cities"))
-      cities.push(...savedCities);
-      console.log(cities);
-      // todos.push(...JSON.parse(localStorage.getItem("todos")));
+      cities.push(...savedCities)
     }
   }
   getCities()
-  console.log(cities)
-
   renderCityButtons();
-
-
-
-
-
-
+ $('button:last-child').click()
+  
 });
