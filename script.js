@@ -90,18 +90,27 @@
   // listening for click on classes of .city, then running the displayCity Info function
   $(document).on("click", ".city", displayCityInfo);
   // Calling the renderCityButtons function to display the initial buttons
-  renderCityButtons();
+  
   //LOCAL STORAGE... here we come
   function storeCityInfo() {
-      localStorage.setItem('cities', cities);
+     localStorage.setItem('cities',  JSON.stringify(cities));
   }
 
   function getCities(){
-    const searchedCities = localStorage.getItem("cities") ;
-    cities.push(searchedCities[2])
+    // if(cities.val()){
+    //   return false;
+    // }
+    if (localStorage.getItem("cities")) {
+      const savedCities = JSON.parse(localStorage.getItem("cities"))
+      cities.push(...savedCities);
+      console.log(cities);
+      // todos.push(...JSON.parse(localStorage.getItem("todos")));
+    }
   }
   getCities()
   console.log(cities)
+
+  renderCityButtons();
 
 
 
