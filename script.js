@@ -82,11 +82,12 @@
     }
     var city = $("#cityInput").val().trim();
     //pushing city input to our array
-    cities.push(city);
+    cities.unshift(city);
     renderCityButtons();
     //clears out input box
     $('#cityInput').val('')
     storeCityInfo()
+    $('button:first-child').click()
   });
   // listening for click on classes of .city, then running the displayCity Info function
   $(document).on("click", ".city", displayCityInfo);
@@ -109,6 +110,6 @@
   getCities()
   renderCityButtons();
   //when page is refreshed the last button element is clicked to render last searched cities data
- $('button:last-child').click()
+  $('button:first-child').click()
   
 });

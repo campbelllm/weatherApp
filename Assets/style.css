@@ -5,7 +5,7 @@ body{
 }
 header{
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     border-bottom: 1px solid black;
 }
 .mainContainer{
@@ -16,7 +16,7 @@ header{
     display: flex;
 }
 #cityInput{
-    width: 100%
+    width: 100%;
 }
 #searchCity{
     font-size: 30px;
@@ -39,6 +39,7 @@ header{
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     border-radius: 3px;
+    text-transform: capitalize;
 }
 .weatherInfo{
     display: flex;
